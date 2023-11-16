@@ -26,3 +26,17 @@ C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\ResidenciaDotNet\P001\obj\
 C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\ResidenciaDotNet\P001\obj\Debug\net7.0\P001.pdb
 C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\ResidenciaDotNet\P001\obj\Debug\net7.0\P001.genruntimeconfig.cache
 C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\ResidenciaDotNet\P001\obj\Debug\net7.0\ref\P001.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\bin\Debug\net7.0\P001.exe
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\bin\Debug\net7.0\P001.deps.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\bin\Debug\net7.0\P001.runtimeconfig.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\bin\Debug\net7.0\P001.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\bin\Debug\net7.0\P001.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\obj\Debug\net7.0\P001.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\obj\Debug\net7.0\P001.AssemblyInfoInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\obj\Debug\net7.0\P001.AssemblyInfo.cs
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\obj\Debug\net7.0\P001.csproj.CoreCompileInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\obj\Debug\net7.0\P001.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\obj\Debug\net7.0\refint\P001.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\obj\Debug\net7.0\P001.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\obj\Debug\net7.0\P001.genruntimeconfig.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana1\P001\obj\Debug\net7.0\ref\P001.dll

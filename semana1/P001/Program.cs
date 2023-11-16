@@ -8,9 +8,9 @@ namespace P001
   {
     static void Main(string[] args)
     {
-      // NcursesDriver.NcursesInit();
 
-      Console.WriteLine("\n\t================================================================================================");
+      LimparTela();
+      Console.WriteLine("\n\t======================================================================================");
       Console.WriteLine("\tTIPOS DE DADOS DO C#\n");
 
       sbyte valor = 42;
@@ -36,11 +36,12 @@ namespace P001
 
       ulong valor8 = 18000000000000000000;
       Console.WriteLine("\tRepresenta números inteiros de 64 bits sem sinal. (ulong) = " + valor8);
-      Console.WriteLine("\t================================================================================================");
+      Console.WriteLine("\t======================================================================================");
 
       // Pausa a execução do programa até que uma tecla seja pressionada
-      Console.WriteLine("\n\tPressione qualquer tecla para continuar...");
+      Console.Write("\n\tPressione qualquer tecla para continuar...");
       Console.ReadKey();
+
       // Limpa a tela
       LimparTela();
 
@@ -51,14 +52,14 @@ namespace P001
       int valorInteiro = (int)valorDouble;
       Console.WriteLine("\n\tdouble valorDouble = 10.75;\n\tint valorInteiro = (int)valorDouble;\n\tEm C#, você pode converter uma variável do tipo double para int utilizando um tipo de cast. (int) = " + valorInteiro);
       Console.WriteLine("\n\tNeste exemplo, valorDouble é uma variável do tipo double com a parte fracionária representando .75. \n\tAo converter para int usando (int)valorDouble, a parte decimal será truncada, resultando em 10 como valor inteiro");
-      Console.WriteLine("\n\tA função Math.Round é usada para arredondar um número para o inteiro mais próximo ou para um número especificado de casas decimais. \n\tO método Math.Round é estático, portanto, você não precisa criar uma instância de Math para usá-lo. \n\tO método Math.Round tem vários sobrecargas. \n\tAqui, usamos o método Math.Round (double, int) para arredondar o valorDouble para o inteiro mais próximo. \n\tO valor de retorno é do tipo double, portanto, precisamos converter para int usando (int). \n\t(int)Math.Round(valorDouble) = " + (int)Math.Round(valorDouble));
+      Console.WriteLine("\n\tA função Math.Round é usada para arredondar um número para o inteiro mais próximo ou para um número especificado de casas decimais. \n\tO método Math.Round é estático, portanto, você não precisa criar uma instância de Math para usá-lo. \n\tO método Math.Round tem várias sobrecargas. \n\tAqui, usamos o método Math.Round (double, int) para arredondar o valorDouble para o inteiro mais próximo. \n\tO valor de retorno é do tipo double, portanto, precisamos converter para int usando (int). \n\t(int)Math.Round(valorDouble) = " + (int)Math.Round(valorDouble));
       Console.WriteLine("\t================================================================================================");
 
-      Console.WriteLine("\n\tPressione qualquer tecla para continuar...");
+      Console.Write("\n\tPressione qualquer tecla para continuar...");
       Console.ReadKey();
-      LimparTela();
 
-      Console.WriteLine("\t================================================================================================");
+      LimparTela();
+      Console.WriteLine("\t=====================================================");
       Console.WriteLine("\tOPERADORES ARITMÉTICOS DO C#");
 
       int x = 10;
@@ -69,13 +70,13 @@ namespace P001
       Console.WriteLine("\n\tMULTIPLICAÇÃO:\n\tx * y = " + (x * y) + " ou pode ser escrito como x *= y = " + (x *= y));
       Console.WriteLine("\n\tDIVISÃO:\n\tx / y = " + (x / y) + " ou pode ser escrito como x /= y = " + (x /= y));
       Console.WriteLine("\n\tRESTO DA DIVISÃO:\n\tx % y = " + (x % y) + " ou pode ser escrito como x %= y = " + (x %= y));
-      Console.WriteLine("\t================================================================================================");
+      Console.WriteLine("\t=====================================================");
 
-      Console.WriteLine("\n\tPressione qualquer tecla para continuar...");
+      Console.Write("\n\tPressione qualquer tecla para continuar...");
       Console.ReadKey();
       LimparTela();
 
-      Console.WriteLine("\t================================================================================================");
+      Console.WriteLine("\t==========================================");
       Console.WriteLine("\tOPERADORES DE COMPARAÇÃO DO C#");
 
       Console.WriteLine("\n\tx = " + x + "\n\ty = " + y + "\n\n\tOperador de igualdade (==):");
@@ -95,13 +96,13 @@ namespace P001
 
       Console.WriteLine("\n\tOperador menor ou igual que (<=):");
       Console.WriteLine("\tx <= y = " + (x <= y));
-      Console.WriteLine("\t================================================================================================");
+      Console.WriteLine("\t========================================");
 
-      Console.WriteLine("\n\tPressione qualquer tecla para continuar...");
+      Console.Write("\n\tPressione qualquer tecla para continuar...");
       Console.ReadKey();
       LimparTela();
 
-      Console.WriteLine("\t================================================================================================");
+      Console.WriteLine("\t===========================================================================");
       Console.WriteLine("\tOPERADORES DE IGUALDADE DO C#");
 
       string str1 = "Hello";
@@ -112,13 +113,13 @@ namespace P001
 
       Console.WriteLine("\n\tOperador de desigualdade (!=):");
       Console.WriteLine("\tstr1 != str2 = " + (str1 != str2) + " ou pode ser escrito como !str1.Equals(str2) = " + !str1.Equals(str2));
-      Console.WriteLine("\t================================================================================================");
+      Console.WriteLine("\t===========================================================================");
 
-      Console.WriteLine("\n\tPressione qualquer tecla para continuar...");
+      Console.Write("\n\tPressione qualquer tecla para continuar...");
       Console.ReadKey();
       LimparTela();
 
-      Console.WriteLine("\t================================================================================================");
+      Console.WriteLine("\t==================================");
       Console.WriteLine("\tOPERADORES LÓGICOS DO C#");
 
       bool condicao1 = true;
@@ -144,13 +145,13 @@ namespace P001
 
       Console.WriteLine("\n\tOperador de negação lógica (!):");
       Console.WriteLine("\t!(a ^ b) = " + !(condicao1 ^ condicao2));
-      Console.WriteLine("\t================================================================================================");
+      Console.WriteLine("\t==================================");
 
-      Console.WriteLine("\n\tPressione qualquer tecla para continuar...");
+      Console.Write("\n\tPressione qualquer tecla para continuar...");
       Console.ReadKey();
       LimparTela();
 
-      Console.WriteLine("\t================================================================================================");
+      Console.WriteLine("\t===========================================");
       Console.WriteLine("\tDESAFIO DE MISTURA DE OPERADORES DO C#");
 
       int num1 = 7;
@@ -158,10 +159,8 @@ namespace P001
       int num3 = 10;
 
       Console.WriteLine("\n\tint num1 = 7;\n\tint num2 = 3;\n\tint num3 = 10;\n\n\tnum1 > num2 && num3 == (num1 + num2) = " + (num1 > num2 && num3 == (num1 + num2)));
+      Console.WriteLine("\t===========================================\n\n");
 
-      Console.WriteLine("\t================================================================================================\n\n");
-
-      // NcursesDriver.NcursesEnd();
     }
 
     static void LimparTela()

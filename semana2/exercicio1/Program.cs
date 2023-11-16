@@ -35,19 +35,19 @@ namespace exercicio1
             LimparTela();
             Console.WriteLine("\n\t========== EXERCICIO 2 ==========");
 
-            string serieFibonacci = "";
-            int anterior = 0;
-            int atual = 1;
+            int limite = 100;
+            int a = 0, b = 1, c = 0;
 
-            Console.Write(anterior);
-            while (atual <= 100)
+            Console.WriteLine("\n\tSequência de Fibonacci até {0}:", limite);
+
+            while (c  < (limite + 50))
             {
-                serieFibonacci += atual + " ";
-                int proximo = anterior + atual;
-                anterior = atual;
-                atual = proximo;
+                Console.Write("\t" + c + " ");
+
+                c = a + b;
+                a = b;
+                b = c;
             }
-            Console.WriteLine("A série de Fibonacci até 100: " + serieFibonacci);
 
 
         }
