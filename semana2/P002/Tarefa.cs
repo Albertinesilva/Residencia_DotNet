@@ -96,7 +96,6 @@ namespace P002
 
         public void adicionar()
         {
-
             Console.WriteLine("\n\t========== CADASTRAR TAREFA ==========");
             Console.Write("\n\tInforme o Título: ");
             string? titulo = Console.ReadLine();
@@ -109,8 +108,10 @@ namespace P002
 
             Tarefa tarefa = new Tarefa(titulo, descricao, dataVencimento);
 
+
             tarefas.Add(tarefa);
-            Console.Write("\n\tTarefa cadastrada com sucesso, pressione Enter para continuar... ");
+            buscaPorId(tarefa.getId());
+            Console.Write("\tTarefa cadastrada com sucesso, pressione Enter para continuar... ");
             Console.ReadLine();
         }
 
@@ -250,7 +251,8 @@ namespace P002
                 tarefa.setTitulo(titulo);
                 tarefa.setDescricao(descricao);
 
-                Console.WriteLine("\n\tTarefa editada com sucesso!");
+                buscaPorId(tarefa.getId());
+                Console.WriteLine("\tTarefa editada com sucesso!");
                 Console.Write("\n\tPressione Enter para continuar... ");
                 Console.ReadLine();
             }
@@ -282,10 +284,25 @@ namespace P002
 
             if (tarefa != null)
             {
+                buscaPorId(id);
+                Console.Write("\tPressione Enter para continuar com a exclusão... ");
+                Console.ReadLine();
+                LimparTela();
+
                 tarefas.Remove(tarefa);
-                Console.WriteLine("\n\tTarefa excluída com sucesso!");
+                if (tarefas.Count == 0)
+                {
+                    Console.WriteLine("\tTarefa excluída com sucesso!");
+                    Console.Write("\n\tPressione Enter para continuar... ");
+                    Console.ReadLine();
+                    return;
+                }
+
+                Console.WriteLine("\tTarefa excluída com sucesso!");
                 Console.Write("\n\tPressione Enter para continuar... ");
                 Console.ReadLine();
+
+                listar();
             }
             else
             {
@@ -316,7 +333,8 @@ namespace P002
             if (tarefa != null)
             {
                 tarefa.setConcluida(true);
-                Console.WriteLine("\n\tTarefa marcada como concluída com sucesso!");
+                buscaPorId(tarefa.getId());
+                Console.WriteLine("\tTarefa marcada como concluída com sucesso!");
                 Console.Write("\n\tPressione Enter para continuar... ");
                 Console.ReadLine();
             }
@@ -338,7 +356,7 @@ namespace P002
                 Console.ReadLine();
                 return;
             }
-            
+
             Console.WriteLine("\n\t========== PESQUISAR TAREFA ==========");
 
             Console.Write("\n\tInforme o id da tarefa que deseja pesquisar: ");
@@ -415,6 +433,28 @@ namespace P002
             Console.WriteLine("\tNúmero de tarefas não concluídas: " + numeroDeTarefasNaoConcluidas);
             Console.Write("\n\tPressione Enter para continuar... ");
             Console.ReadLine();
+        }
+
+        public void buscaPorId(int id)
+        {
+
+            for (int i = 0; i < tarefas.Count; i++)
+            {
+                if (tarefas[i].getId() == id)
+                {
+                    LimparTela();
+                    Console.WriteLine("\n\t=============== TAREFA =================");
+                    Console.WriteLine("\tID: " + tarefas[i].getId());
+                    Console.WriteLine("\tTítulo: " + tarefas[i].getTitulo());
+                    Console.WriteLine("\tDescrição: " + tarefas[i].getDescricao());
+                    Console.WriteLine("\tData de Criação: " + tarefas[i].getDataCriacao());
+                    Console.WriteLine("\tData de Vencimento: " + tarefas[i].getDataVencimento().ToString("dd/MM/yyyy"));
+                    Console.WriteLine("\tConcluída: " + tarefas[i].getConcluida());
+                    Console.WriteLine("\t========================================");
+                    return;
+                }
+            }
+
         }
 
         static void LimparTela()

@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Globalization;
 
 namespace P002
 {
@@ -17,7 +18,8 @@ namespace P002
       do
       {
         LimparTela();
-        Console.WriteLine("\n\t===== MENU PRINCIPAL =====");
+        dataHoraAtual();
+        Console.WriteLine("\t===== MENU PRINCIPAL =====");
         Console.WriteLine("\t[1] - ADICIONAR TAREFA");
         Console.WriteLine("\t[2] - LISTAR TAREFAS");
         Console.WriteLine("\t[3] - EDITAR TAREFA");
@@ -101,6 +103,15 @@ namespace P002
             break;
         }
       } while (opcao != 0);
+    }
+
+    static void dataHoraAtual()
+    {
+
+      var data = DateTime.Now;
+      var formatada = string.Format("\n\t{0:f}", data);
+      Console.WriteLine(formatada);
+      Console.WriteLine("\tFalta " + (365 - data.DayOfYear) + " dias para o fim do ano.\n");
     }
 
     static void LimparTela()
