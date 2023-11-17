@@ -148,6 +148,7 @@ namespace P002
                         {
                             // Verificar se há pelo menos uma tarefa concluída na lista
                             bool temTarefaConcluida = tarefas.Any(tarefa => tarefa.concluida);
+                            int i = 1;
 
                             if (temTarefaConcluida == false)
                             {
@@ -163,6 +164,7 @@ namespace P002
                             {
                                 if (tarefa.getConcluida())
                                 {
+                                    Console.WriteLine("\tTarefa: " + (i++) + "º");
                                     Console.WriteLine("\tID: " + tarefa.getId());
                                     Console.WriteLine("\tTítulo: " + tarefa.getTitulo());
                                     Console.WriteLine("\tDescrição: " + tarefa.getDescricao());
@@ -180,6 +182,7 @@ namespace P002
                             if (opcao == 2)
                             {
                                 bool temTarefaConcluida = tarefas.Any(tarefa => tarefa.concluida);
+                                int i = 1;
 
                                 if (temTarefaConcluida == true)
                                 {
@@ -195,6 +198,7 @@ namespace P002
                                 {
                                     if (!tarefa.getConcluida())
                                     {
+                                        Console.WriteLine("\tTarefa: " + (i++) + "º");
                                         Console.WriteLine("\tID: " + tarefa.getId());
                                         Console.WriteLine("\tTítulo: " + tarefa.getTitulo());
                                         Console.WriteLine("\tDescrição: " + tarefa.getDescricao());
@@ -311,7 +315,6 @@ namespace P002
 
             if (tarefa != null)
             {
-
                 tarefa.setConcluida(true);
                 Console.WriteLine("\n\tTarefa marcada como concluída com sucesso!");
                 Console.Write("\n\tPressione Enter para continuar... ");
@@ -319,7 +322,6 @@ namespace P002
             }
             else
             {
-
                 Console.WriteLine("\n\tOps, nenhuma tarefa encontrada com o ID informado!");
                 Console.Write("\n\tPressione Enter para continuar... ");
                 Console.ReadLine();
@@ -368,6 +370,9 @@ namespace P002
 
         public void estatisticas()
         {
+            int numeroDeTarefasConcluidas = 0;
+            int numeroDeTarefasNaoConcluidas = 0;
+            int i = 1;
 
             Console.WriteLine("\n\t========== ESTATÍSTICAS BASEADA EM DATA E TAREFA CONCLUÍDA ==========");
 
@@ -378,6 +383,37 @@ namespace P002
                 Console.ReadLine();
                 return;
             }
+
+            Console.WriteLine("\n\t========== TAREFAS ATRASADAS ==========");
+            foreach (Tarefa tarefa in tarefas)
+            {
+                if (tarefa.getConcluida())
+                {
+                    numeroDeTarefasConcluidas++;
+                }
+                else
+                {
+                    numeroDeTarefasNaoConcluidas++;
+                }
+
+                if (tarefa.getDataCriacao() < DateTime.Now)
+                {
+                    Console.WriteLine("\tTarefa: " + (i++) + "º");
+                    Console.WriteLine("\tID: " + tarefa.getId());
+                    Console.WriteLine("\tTítulo: " + tarefa.getTitulo());
+                    Console.WriteLine("\tDescrição: " + tarefa.getDescricao());
+                    Console.WriteLine("\tData de Criação: " + tarefa.getDataCriacao());
+                    Console.WriteLine("\tData de Vencimento: " + tarefa.getDataVencimento().ToString("dd/MM/yyyy"));
+                    Console.WriteLine("\tConcluída: " + tarefa.getConcluida());
+                    Console.WriteLine("\t=======================================");
+                }
+
+            }
+
+            Console.WriteLine("\n\tNúmero de tarefas concluídas: " + numeroDeTarefasConcluidas);
+            Console.WriteLine("\tNúmero de tarefas não concluídas: " + numeroDeTarefasNaoConcluidas);
+            Console.Write("\n\tPressione Enter para continuar... ");
+            Console.ReadLine();
         }
 
         static void LimparTela()
