@@ -27,3 +27,17 @@ C:/Users/alber/OneDrive/Documentos/ProjetosResidencia/residenciaDotNet/P002/obj/
 /home/albert-silva-jesus/Documentos/ResidenciaDotNet/P002/obj/Debug/net7.0/P002.pdb
 /home/albert-silva-jesus/Documentos/ResidenciaDotNet/P002/obj/Debug/net7.0/P002.genruntimeconfig.cache
 /home/albert-silva-jesus/Documentos/ResidenciaDotNet/P002/obj/Debug/net7.0/ref/P002.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\bin\Debug\net7.0\P002.exe
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\bin\Debug\net7.0\P002.deps.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\bin\Debug\net7.0\P002.runtimeconfig.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\bin\Debug\net7.0\P002.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\bin\Debug\net7.0\P002.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\obj\Debug\net7.0\P002.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\obj\Debug\net7.0\P002.AssemblyInfoInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\obj\Debug\net7.0\P002.AssemblyInfo.cs
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\obj\Debug\net7.0\P002.csproj.CoreCompileInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\obj\Debug\net7.0\P002.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\obj\Debug\net7.0\refint\P002.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\obj\Debug\net7.0\P002.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\obj\Debug\net7.0\P002.genruntimeconfig.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\P002\obj\Debug\net7.0\ref\P002.dll

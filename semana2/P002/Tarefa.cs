@@ -11,7 +11,7 @@ namespace P002
         private int id;
         private string titulo;
         private string descricao;
-        private DateTime dataCriacao;
+        private DateTime dataCriacao, dataVencimento;
         private bool concluida;
         private List<Tarefa> tarefas;
 
@@ -19,12 +19,13 @@ namespace P002
         {
             tarefas = new List<Tarefa>();
         }
-        public Tarefa(string titulo, string descricao)
+        public Tarefa(string titulo, string descricao, DateTime dataVencimento)
         {
             this.id = proximoId++;
             this.titulo = titulo;
             this.descricao = descricao;
             this.dataCriacao = DateTime.Now;
+            this.dataVencimento = dataVencimento;
             tarefas = new List<Tarefa>();
         }
 
@@ -63,6 +64,16 @@ namespace P002
             this.dataCriacao = dataCriacao;
         }
 
+        public DateTime getDataVencimento()
+        {
+            return this.dataVencimento;
+        }
+
+        public void setDataVencimento(DateTime dataVencimento)
+        {
+            this.dataVencimento = dataVencimento;
+        }
+
         public bool getConcluida()
         {
             return this.concluida;
@@ -93,7 +104,10 @@ namespace P002
             Console.Write("\n\tInforme a Descrição: ");
             string? descricao = Console.ReadLine();
 
-            Tarefa tarefa = new Tarefa(titulo, descricao);
+            Console.Write("\n\tInforme a Data de Vencimento (no formato dd/MM/yyyy): ");
+            DateTime dataVencimento = LerDataDoUsuario();
+
+            Tarefa tarefa = new Tarefa(titulo, descricao, dataVencimento);
 
             tarefas.Add(tarefa);
             Console.Write("\n\tTarefa cadastrada com sucesso, pressione Enter para continuar... ");
@@ -112,7 +126,7 @@ namespace P002
             }
             else
             {
-                Console.Write("\n\tDeseja listar as tarefas concluídas ou não concluídas?\n\n\t[1] - CONCLUÍDAS\n\t[2] - NÃO CONCLUÍDAS\n\t[0] - VOLTAR\n\tENTRADA -> ");
+                Console.Write("\n\tDeseja listar as tarefas concluídas ou não concluídas?\n\n\t[1] - TAREFAS CONCLUÍDAS\n\t[2] - TAREFAS PENDENTES\n\t[0] - VOLTAR\n\tENTRADA -> ");
                 opcao = Int32.Parse(Console.ReadLine());
                 LimparTela();
 
@@ -143,20 +157,21 @@ namespace P002
                                 return;
                             }
 
-                            Console.WriteLine("\n\t========== LISTAR TAREFAS CONCLUÍDAS ==========");
+                            Console.WriteLine("\n\t======= LISTAR TAREFAS CONCLUÍDAS =======");
 
                             foreach (Tarefa tarefa in tarefas)
                             {
                                 if (tarefa.getConcluida())
                                 {
-                                    Console.WriteLine("\n\tID: " + tarefa.getId());
+                                    Console.WriteLine("\tID: " + tarefa.getId());
                                     Console.WriteLine("\tTítulo: " + tarefa.getTitulo());
                                     Console.WriteLine("\tDescrição: " + tarefa.getDescricao());
                                     Console.WriteLine("\tData de Criação: " + tarefa.getDataCriacao());
+                                    Console.WriteLine("\tData de Vencimento: " + tarefa.dataVencimento.ToString("dd/MM/yyyy"));
                                     Console.WriteLine("\tConcluída: Sim");
+                                    Console.WriteLine("\t=======================================");
                                 }
                             }
-                            Console.WriteLine("\t====================================");
                             Console.Write("\tPressione Enter para continuar... ");
                             Console.ReadLine();
                         }
@@ -165,20 +180,21 @@ namespace P002
 
                             if (opcao == 2)
                             {
-                                Console.WriteLine("\n\t========== LISTAR TAREFAS NÃO CONCLUÍDAS ==========");
+                                Console.WriteLine("\n\t======= LISTAR TAREFAS NÃO CONCLUÍDAS =======");
 
                                 foreach (Tarefa tarefa in tarefas)
                                 {
                                     if (!tarefa.getConcluida())
                                     {
-                                        Console.WriteLine("\n\tID: " + tarefa.getId());
+                                        Console.WriteLine("\tID: " + tarefa.getId());
                                         Console.WriteLine("\tTítulo: " + tarefa.getTitulo());
                                         Console.WriteLine("\tDescrição: " + tarefa.getDescricao());
                                         Console.WriteLine("\tData de Criação: " + tarefa.getDataCriacao());
+                                        Console.WriteLine("\tData de Vencimento: " + tarefa.getDataVencimento().ToString("dd/MM/yyyy"));
                                         Console.WriteLine("\tConcluída: Não");
+                                        Console.WriteLine("\t============================================");
                                     }
                                 }
-                                Console.WriteLine("\t====================================");
                                 Console.Write("\tPressione Enter para continuar... ");
                                 Console.ReadLine();
                             }
@@ -287,10 +303,11 @@ namespace P002
             {
                 LimparTela();
                 Console.WriteLine("\n\t========== TAREFA ENCONTRADA ==========");
-                Console.WriteLine("\n\tID: " + tarefa.getId());
+                Console.WriteLine("\tID: " + tarefa.getId());
                 Console.WriteLine("\tTítulo: " + tarefa.getTitulo());
                 Console.WriteLine("\tDescrição: " + tarefa.getDescricao());
                 Console.WriteLine("\tData de Criação: " + tarefa.getDataCriacao());
+                Console.WriteLine("\tData de Vencimento: " + tarefa.dataVencimento.ToString("dd/MM/yyyy"));
                 Console.WriteLine("\tConcluída: " + tarefa.getConcluida());
                 Console.WriteLine("\t====================================");
                 Console.Write("\tPressione Enter para continuar... ");
@@ -316,6 +333,18 @@ namespace P002
             {
                 Console.Write("\u001b[2J\u001b[1;1H"); // Linux
             }
+        }
+
+        static DateTime LerDataDoUsuario()
+        {
+            DateTime data;
+
+            while (!DateTime.TryParseExact(Console.ReadLine(), "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out data))
+            {
+                Console.Write("\tFormato de data inválido. Tente novamente (dd/mm/aaaa): ");
+            }
+
+            return data;
         }
 
     }
