@@ -24,6 +24,7 @@ namespace P002
         Console.WriteLine("\t[4] - REMOVER TAREFA");
         Console.WriteLine("\t[5] - PESQUISAR TAREFA");
         Console.WriteLine("\t[6] - CONCLUIR TAREFA");
+        Console.WriteLine("\t[7] - ESTATÍSTICAS COM DATA E TAREFA CONCLUÍDA");
         Console.WriteLine("\t[0] - SAIR");
         Console.Write("\tENTRADA -> ");
         string userInput = Console.ReadLine();
@@ -31,9 +32,9 @@ namespace P002
         if (!string.IsNullOrEmpty(userInput) && Int32.TryParse(userInput, out opcao))
         {
           // A conversão foi bem-sucedida
-          if (opcao < 0 || opcao > 6)
+          if (opcao < 0 || opcao > 7)
           {
-            Console.WriteLine("\n\tOpção inválida. Por favor, escolha uma opção de 0 a 6.");
+            Console.WriteLine("\n\tOpção inválida. Por favor, escolha uma opção de 0 a 7.");
             Pause();
           }
         }
@@ -43,7 +44,7 @@ namespace P002
           Pause();
         }
 
-      } while (opcao > 6 || opcao < 0);
+      } while (opcao > 7 || opcao < 0);
 
       return opcao;
     }
@@ -84,6 +85,11 @@ namespace P002
           case 6:
             LimparTela();
             tarefa.marcarTarefaComoConcluida();
+            break;
+
+          case 7:
+            LimparTela();
+            tarefa.estatisticas();
             break;
 
           case 0:

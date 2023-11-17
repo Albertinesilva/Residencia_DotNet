@@ -177,9 +177,18 @@ namespace P002
                         }
                         else
                         {
-
                             if (opcao == 2)
                             {
+                                bool temTarefaConcluida = tarefas.Any(tarefa => tarefa.concluida);
+
+                                if (temTarefaConcluida == true)
+                                {
+                                    Console.WriteLine("\n\tOps, nenhuma tarefa concluída!");
+                                    Console.Write("\n\tPressione Enter para continuar... ");
+                                    Console.ReadLine();
+                                    return;
+                                }
+
                                 Console.WriteLine("\n\t======= LISTAR TAREFAS NÃO CONCLUÍDAS =======");
 
                                 foreach (Tarefa tarefa in tarefas)
@@ -209,6 +218,14 @@ namespace P002
 
             Console.WriteLine("\n\t========== EDITAR TAREFA ==========");
 
+            if (tarefas.Count == 0)
+            {
+                Console.WriteLine("\n\tOps, nenhuma tarefa cadastrada!");
+                Console.Write("\n\tPressione Enter para continuar... ");
+                Console.ReadLine();
+                return;
+            }
+
             Console.Write("\n\tInforme o ID da tarefa que deseja editar: ");
             int id = Int32.Parse(Console.ReadLine());
 
@@ -222,6 +239,10 @@ namespace P002
                 Console.Write("\n\tInforme a nova Descrição: ");
                 string? descricao = Console.ReadLine();
 
+                Console.Write("\n\tInforme a Data de Vencimento (no formato dd/MM/yyyy): ");
+                DateTime dataVencimento = LerDataDoUsuario();
+
+                tarefa.setDataVencimento(dataVencimento);
                 tarefa.setTitulo(titulo);
                 tarefa.setDescricao(descricao);
 
@@ -241,6 +262,14 @@ namespace P002
         {
 
             Console.WriteLine("\n\t========== EXCLUIR TAREFA ==========");
+
+            if (tarefas.Count == 0)
+            {
+                Console.WriteLine("\n\tOps, nenhuma tarefa cadastrada!");
+                Console.Write("\n\tPressione Enter para continuar... ");
+                Console.ReadLine();
+                return;
+            }
 
             Console.Write("\n\tInforme o ID da tarefa que deseja excluir: ");
             int id = Int32.Parse(Console.ReadLine());
@@ -267,6 +296,14 @@ namespace P002
 
             Console.WriteLine("\n\t========== MARCAR TAREFA COMO CONCLUÍDA ==========");
 
+            if (tarefas.Count == 0)
+            {
+                Console.WriteLine("\n\tOps, nenhuma tarefa cadastrada!");
+                Console.Write("\n\tPressione Enter para continuar... ");
+                Console.ReadLine();
+                return;
+            }
+
             Console.Write("\n\tInforme o ID da tarefa que deseja marcar como concluída: ");
             int id = Int32.Parse(Console.ReadLine());
 
@@ -292,6 +329,13 @@ namespace P002
         public void pesquisar()
         {
 
+            if (tarefas.Count == 0)
+            {
+                Console.WriteLine("\n\tOps, nenhuma tarefa cadastrada!");
+                Console.Write("\n\tPressione Enter para continuar... ");
+                Console.ReadLine();
+                return;
+            }
             Console.WriteLine("\n\t========== PESQUISAR TAREFA ==========");
 
             Console.Write("\n\tInforme o id da tarefa que deseja pesquisar: ");
@@ -309,7 +353,7 @@ namespace P002
                 Console.WriteLine("\tData de Criação: " + tarefa.getDataCriacao());
                 Console.WriteLine("\tData de Vencimento: " + tarefa.dataVencimento.ToString("dd/MM/yyyy"));
                 Console.WriteLine("\tConcluída: " + tarefa.getConcluida());
-                Console.WriteLine("\t====================================");
+                Console.WriteLine("\t=======================================");
                 Console.Write("\tPressione Enter para continuar... ");
                 Console.ReadLine();
             }
@@ -319,6 +363,20 @@ namespace P002
                 Console.WriteLine("\n\tOps, nenhuma tarefa encontrada com o Título informado!");
                 Console.Write("\n\tPressione Enter para continuar... ");
                 Console.ReadLine();
+            }
+        }
+
+        public void estatisticas()
+        {
+
+            Console.WriteLine("\n\t========== ESTATÍSTICAS BASEADA EM DATA E TAREFA CONCLUÍDA ==========");
+
+            if (tarefas.Count == 0)
+            {
+                Console.WriteLine("\n\tOps, nenhuma tarefa cadastrada!");
+                Console.Write("\n\tPressione Enter para continuar... ");
+                Console.ReadLine();
+                return;
             }
         }
 
