@@ -127,7 +127,7 @@ namespace P002
             }
             else
             {
-                Console.Write("\n\tDeseja listar as tarefas concluídas ou não concluídas?\n\n\t[1] - TAREFAS CONCLUÍDAS\n\t[2] - TAREFAS PENDENTES\n\t[0] - VOLTAR\n\tENTRADA -> ");
+                Console.Write("\n\tDeseja listar as tarefas concluídas ou não concluídas?\n\n\t[1] - TAREFAS CONCLUÍDAS\n\t[2] - TAREFAS PENDENTES\n\t[3] - LISTAR TODAS AS TAREFAS\n\t[0] - VOLTAR\n\tENTRADA -> ");
                 opcao = Int32.Parse(Console.ReadLine());
                 LimparTela();
 
@@ -137,7 +137,7 @@ namespace P002
                 }
                 else
                 {
-                    if (opcao != 1 && opcao != 2)
+                    if (opcao != 1 && opcao != 2 && opcao != 3)
                     {
                         Console.WriteLine("\n\tOpção inválida, pressione Enter para continuar... ");
                         Console.ReadLine();
@@ -148,10 +148,10 @@ namespace P002
                         if (opcao == 1)
                         {
                             // Verificar se há pelo menos uma tarefa concluída na lista
-                            bool temTarefaConcluida = tarefas.Any(tarefa => tarefa.concluida);
+                            bool temTarefaConcluida = tarefas.Any(tarefa => tarefa.getConcluida());
                             int i = 1;
 
-                            if (temTarefaConcluida == false)
+                            if (!temTarefaConcluida)
                             {
                                 Console.WriteLine("\n\tOps, nenhuma tarefa concluída!");
                                 Console.Write("\n\tPressione Enter para continuar... ");
@@ -182,18 +182,18 @@ namespace P002
                         {
                             if (opcao == 2)
                             {
-                                bool temTarefaConcluida = tarefas.Any(tarefa => tarefa.concluida);
+                                bool temTarefaConcluida = tarefas.Any(tarefa => !tarefa.getConcluida());
                                 int i = 1;
 
-                                if (temTarefaConcluida == true)
+                                if (!temTarefaConcluida)
                                 {
-                                    Console.WriteLine("\n\tOps, nenhuma tarefa concluída!");
+                                    Console.WriteLine("\n\tOps, nenhuma tarefa não concluída!");
                                     Console.Write("\n\tPressione Enter para continuar... ");
                                     Console.ReadLine();
                                     return;
                                 }
 
-                                Console.WriteLine("\n\t======= LISTAR TAREFAS NÃO CONCLUÍDAS =======");
+                                Console.WriteLine("\n\t======= LISTAR TAREFAS PENDENTES =======");
 
                                 foreach (Tarefa tarefa in tarefas)
                                 {
@@ -206,11 +206,35 @@ namespace P002
                                         Console.WriteLine("\tData de Criação: " + tarefa.getDataCriacao());
                                         Console.WriteLine("\tData de Vencimento: " + tarefa.getDataVencimento().ToString("dd/MM/yyyy"));
                                         Console.WriteLine("\tConcluída: Não");
-                                        Console.WriteLine("\t============================================");
+                                        Console.WriteLine("\t========================================");
                                     }
                                 }
                                 Console.Write("\tPressione Enter para continuar... ");
                                 Console.ReadLine();
+
+                            }
+                            else
+                            {
+                                if (opcao == 3)
+                                {
+                                    int i = 1;
+
+                                    Console.WriteLine("\n\t======= LISTAR TODAS AS TAREFAS =======");
+
+                                    foreach (Tarefa tarefa in tarefas)
+                                    {
+                                        Console.WriteLine("\tTarefa: " + (i++) + "º");
+                                        Console.WriteLine("\tID: " + tarefa.getId());
+                                        Console.WriteLine("\tTítulo: " + tarefa.getTitulo());
+                                        Console.WriteLine("\tDescrição: " + tarefa.getDescricao());
+                                        Console.WriteLine("\tData de Criação: " + tarefa.getDataCriacao());
+                                        Console.WriteLine("\tData de Vencimento: " + tarefa.getDataVencimento().ToString("dd/MM/yyyy"));
+                                        Console.WriteLine("\tConcluída: " + tarefa.getConcluida());
+                                        Console.WriteLine("\t=======================================");
+                                    }
+                                    Console.Write("\tPressione Enter para continuar... ");
+                                    Console.ReadLine();
+                                }
                             }
                         }
                     }
