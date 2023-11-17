@@ -1,10 +1,10 @@
 <h1 align="center">Residencia .Net</h1>
 
-## Objetivo da Atividade
+## Objetivo da Atividade:
 
 ### Este projeto permitirá aos discentes praticar a aplicação de estruturas de controle de fluxo, manipulação de tipos de dados, trabalho com datas e a criação de um aplicativo de linha de comando útil para gerenciamento de tarefas, algo comum em muitos ambientes corporativos
 
-## Objetivo do Projeto
+## Objetivo do Projeto:
 
 ### Desenvolver um sistema de gerenciamento de tarefas que permita aos usuários criar, visualizar e gerenciar tarefas.
 
