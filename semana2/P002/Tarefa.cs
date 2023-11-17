@@ -338,6 +338,7 @@ namespace P002
                 Console.ReadLine();
                 return;
             }
+            
             Console.WriteLine("\n\t========== PESQUISAR TAREFA ==========");
 
             Console.Write("\n\tInforme o id da tarefa que deseja pesquisar: ");
