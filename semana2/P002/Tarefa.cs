@@ -17,6 +17,9 @@ namespace P002
 
         public Tarefa()
         {
+            this.titulo = "";
+            this.descricao = "";
+            this.concluida = false;
             tarefas = new List<Tarefa>();
         }
         public Tarefa(string titulo, string descricao, DateTime dataVencimento)
@@ -325,7 +328,7 @@ namespace P002
                 Console.WriteLine("\tTarefa excluída com sucesso!");
                 Console.Write("\n\tPressione Enter para continuar... ");
                 Console.ReadLine();
-
+                LimparTela();
                 listar();
             }
             else
