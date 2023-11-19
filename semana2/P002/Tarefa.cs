@@ -102,15 +102,16 @@ namespace P002
             Console.WriteLine("\n\t========== CADASTRAR TAREFA ==========");
             Console.Write("\n\tInforme o Título: ");
             string? titulo = Console.ReadLine();
+            titulo = convertePrimeiraLetraParaMaiuscula(titulo);
 
             Console.Write("\n\tInforme a Descrição: ");
             string? descricao = Console.ReadLine();
+            descricao = convertePrimeiraLetraParaMaiuscula(descricao);
 
             Console.Write("\n\tInforme a Data de Vencimento (no formato dd/MM/yyyy): ");
             DateTime dataVencimento = LerDataDoUsuario();
 
             Tarefa tarefa = new Tarefa(titulo, descricao, dataVencimento);
-
 
             tarefas.Add(tarefa);
             buscaPorId(tarefa.getId());
@@ -267,9 +268,13 @@ namespace P002
             {
                 Console.Write("\n\tInforme o novo Título: ");
                 string? titulo = Console.ReadLine();
+                
+                titulo = convertePrimeiraLetraParaMaiuscula(titulo);
 
                 Console.Write("\n\tInforme a nova Descrição: ");
                 string? descricao = Console.ReadLine();
+
+                descricao = convertePrimeiraLetraParaMaiuscula(descricao);
 
                 Console.Write("\n\tInforme a Data de Vencimento (no formato dd/MM/yyyy): ");
                 DateTime dataVencimento = LerDataDoUsuario();
@@ -507,6 +512,35 @@ namespace P002
             }
 
             return data;
+        }
+
+        static String convertePrimeiraLetraParaMaiuscula(string palavra)
+        {
+            string palavraComMaiuscula = "";
+            bool converteu = true;
+
+            do
+            {
+                // Verifica se a string não está vazia
+                if (!string.IsNullOrEmpty(palavra))
+                {
+                    // Converte a primeira letra para maiúscula
+                    palavraComMaiuscula = char.ToUpper(palavra[0]) + palavra.Substring(1);
+                    converteu = false;
+                }
+                else
+                {
+                    Console.WriteLine("\n\tA string está vazia.");
+                    Console.Write("\tPressione Enter para continuar... ");
+                    Console.ReadLine();
+                    LimparTela();
+
+                    Console.Write("\n\tInforme o Título: ");
+                    palavra = Console.ReadLine();
+                }
+            } while (converteu);
+
+            return palavraComMaiuscula;
         }
 
     }
