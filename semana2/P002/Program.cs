@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
+﻿using System;
 using System.Globalization;
 
 namespace P002
@@ -126,7 +125,7 @@ namespace P002
         Console.Write("\u001b[2J\u001b[1;1H"); // Linux
       }
     }
-
+    
     static void Pause()
     {
       Console.Write("\n\tPressione Enter para continuar...");
