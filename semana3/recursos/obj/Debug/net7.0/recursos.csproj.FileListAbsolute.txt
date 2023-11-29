@@ -1,0 +1,14 @@
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\bin\Debug\net7.0\recursos.exe
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\bin\Debug\net7.0\recursos.deps.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\bin\Debug\net7.0\recursos.runtimeconfig.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\bin\Debug\net7.0\recursos.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\bin\Debug\net7.0\recursos.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\obj\Debug\net7.0\recursos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\obj\Debug\net7.0\recursos.AssemblyInfoInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\obj\Debug\net7.0\recursos.AssemblyInfo.cs
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\obj\Debug\net7.0\recursos.csproj.CoreCompileInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\obj\Debug\net7.0\recursos.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\obj\Debug\net7.0\refint\recursos.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\obj\Debug\net7.0\recursos.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\obj\Debug\net7.0\recursos.genruntimeconfig.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\recursos\obj\Debug\net7.0\ref\recursos.dll

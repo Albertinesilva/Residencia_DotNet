@@ -1,0 +1,14 @@
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\obj\Debug\net7.0\data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\obj\Debug\net7.0\data.AssemblyInfoInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\obj\Debug\net7.0\data.AssemblyInfo.cs
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\obj\Debug\net7.0\data.csproj.CoreCompileInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\bin\Debug\net7.0\data.exe
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\bin\Debug\net7.0\data.deps.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\bin\Debug\net7.0\data.runtimeconfig.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\bin\Debug\net7.0\data.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\bin\Debug\net7.0\data.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\obj\Debug\net7.0\data.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\obj\Debug\net7.0\refint\data.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\obj\Debug\net7.0\data.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\obj\Debug\net7.0\data.genruntimeconfig.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana2\data\obj\Debug\net7.0\ref\data.dll

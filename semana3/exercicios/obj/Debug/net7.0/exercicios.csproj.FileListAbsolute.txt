@@ -1,0 +1,14 @@
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\bin\Debug\net7.0\exercicios.exe
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\bin\Debug\net7.0\exercicios.deps.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\bin\Debug\net7.0\exercicios.runtimeconfig.json
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\bin\Debug\net7.0\exercicios.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\bin\Debug\net7.0\exercicios.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\obj\Debug\net7.0\exercicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\obj\Debug\net7.0\exercicios.AssemblyInfoInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\obj\Debug\net7.0\exercicios.AssemblyInfo.cs
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\obj\Debug\net7.0\exercicios.csproj.CoreCompileInputs.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\obj\Debug\net7.0\exercicios.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\obj\Debug\net7.0\refint\exercicios.dll
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\obj\Debug\net7.0\exercicios.pdb
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\obj\Debug\net7.0\exercicios.genruntimeconfig.cache
+C:\Users\alber\OneDrive\Documentos\ProjetosResidencia\residenciaDotNet\semana3\exercicios\obj\Debug\net7.0\ref\exercicios.dll
