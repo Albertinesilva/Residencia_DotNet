@@ -19,8 +19,7 @@ namespace P003
             ListaDeTuplas.Add(tupla);
         }
 
-        public void Cadastrar()
-        {
+        public void Cadastrar(){
             Console.WriteLine("\n\t========== CADASTRAR PRODUTO ==========");
             int codigo;
 
@@ -47,8 +46,7 @@ namespace P003
 
         }
 
-        public void Listar()
-        {
+        public void Listar(){
             Console.WriteLine("\n\t========== LISTAR PRODUTOS ==========");
 
             if (ListaDeTuplas.Count == 0)
@@ -70,8 +68,7 @@ namespace P003
 
         }
 
-        public void Editar()
-        {
+        public void Editar(){
             int codigo = ValidarEntradaInt("\n\tInforme o CÓDIGO do Produto");
 
             // Encontre o índice da tupla a ser editada
