@@ -12,7 +12,7 @@ namespace recursos
             int opcao = -1;
             do
             {
-                // LimparTela();
+                LimparTela();
                 DataHoraAtual();
                 Console.WriteLine("\t===== CONTROLE DE ESTOQUE =====");
                 Console.WriteLine("\t[1] - CADASTRAR");
@@ -48,7 +48,7 @@ namespace recursos
         }
         public static void MenuGestaoClinica(ListPaciente pacientes)
         {
-
+            Relatorios relatorios = new Relatorios(pacientes);
             int opcao = 0;
             do
             {
@@ -89,7 +89,7 @@ namespace recursos
 
                     case 7:
                         LimparTela();
-
+                        relatorios.MenuRelatorios();
                         break;
 
                     case 0:

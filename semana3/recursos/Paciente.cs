@@ -13,12 +13,27 @@ namespace recursos
 
 
         public Paciente(string nome, DateTime dataNascimento, string cpf, string sexo = "Não informado", string sintomas = "Não informado")
-           : base(nome, dataNascimento, cpf)
+           : base(nome, dataNascimento, cpf, idade: 0)
         {
             this.Sexo = sexo;
             this.Sintomas = sintomas;
+
+            // Calcular a idade ao criar o paciente
+            this.Idade = CalcularIdade(this.DataNascimento);
         }
 
+        public static bool IsCpfUnico(string cpf, List<Paciente> pacientes)
+        {
+            // Verifica se o CPF é válido antes de proceder
+            if (!IsValidCPF(cpf))
+            {
+                throw new ArgumentException("\n\tOps, CPF inválido!...");
+            }
+
+            // Verifica se o CPF já existe na lista de pacientes
+            return !pacientes.Any(paciente => paciente.Cpf == cpf);
+        }
+        
         public static bool IsValidCPF(string cpf)
         {
             // Remover caracteres não numéricos
@@ -102,6 +117,7 @@ namespace recursos
 
             return palavraComMaiuscula;
         }
+
         public static DateTime ObterDataDeNascimento()
         {
             string inputDataNascimento;
@@ -109,13 +125,14 @@ namespace recursos
 
             do
             {
-                Console.WriteLine("\n\tDigite a data de nascimento do paciente (no formato dd/MM/yyyy): ");
+                Console.Write("\n\tDigite a data de nascimento do paciente (no formato dd/MM/yyyy): ");
                 inputDataNascimento = Console.ReadLine()!;
 
             } while (!TentarObterDataValida(inputDataNascimento, out dataNascimento));
 
             return dataNascimento;
         }
+
         public static bool TentarObterDataValida(string input, out DateTime data)
         {
             if (DateTime.TryParseExact(input, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data)
@@ -128,6 +145,20 @@ namespace recursos
             Console.WriteLine("\n\tFormato de data inválido ou data no futuro. Digite novamente.");
             return false;
         }
+
+        private int CalcularIdade(DateTime dataNascimento)
+        {
+            int idade = DateTime.Now.Year - dataNascimento.Year;
+
+            // Verificar se o aniversário já ocorreu neste ano
+            if (dataNascimento.Date > DateTime.Now.Date.AddYears(-idade))
+            {
+                idade--;
+            }
+
+            return idade;
+        }
+
         public static string ObterSexoValido(string mensagem)
         {
             string sexo;

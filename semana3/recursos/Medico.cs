@@ -10,7 +10,7 @@ namespace recursos
         public string CRM { get; set; }
 
         public Medico(string nome, DateTime dataNascimento, string cpf, string crm)
-            : base(nome, dataNascimento, cpf)
+            : base(nome, dataNascimento, cpf, idade: 0)
         {
             if (!ValidarCRM(crm))
             {

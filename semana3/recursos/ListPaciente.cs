@@ -30,11 +30,6 @@ namespace recursos
             Pacientes.RemoveAll(paciente => paciente.Cpf == cpf);
         }
 
-        public Paciente GetPaciente(string cpf)
-        {
-            return Pacientes.Find(paciente => paciente.Cpf == cpf)!;
-        }
-
         public List<Paciente> GetPacientes()
         {
             return Pacientes;
@@ -52,13 +47,13 @@ namespace recursos
                 Console.Write("\n\tDigite o CPF do paciente: ");
                 cpf = Console.ReadLine()!;
 
-                if (!Paciente.IsValidCPF(cpf))
+                if (!Paciente.IsValidCPF(cpf) || !Paciente.IsCpfUnico(cpf, Pacientes))
                 {
-                    Console.WriteLine("\n\tOps, CPF inválido. Por favor, digite um CPF válido.");
+                    Console.WriteLine("\n\tOps, CPF inválido ou já existe no cadastro. Por favor, digite um CPF válido.");
                     App.Pause();
                 }
 
-            } while (!Paciente.IsValidCPF(cpf));
+            } while (!Paciente.IsValidCPF(cpf) || !Paciente.IsCpfUnico(cpf, Pacientes));
 
             DateTime dataNascimento = Paciente.ObterDataDeNascimento();
 
@@ -80,6 +75,7 @@ namespace recursos
                 Console.WriteLine("\tNome: " + paciente.Nome);
                 Console.WriteLine("\tCPF: " + paciente.Cpf);
                 Console.WriteLine("\tData de Nascimento: " + paciente.DataNascimento.ToString("dd/MM/yyyy"));
+                Console.WriteLine("\tIdade: " + paciente.Idade);
                 Console.WriteLine("\tSexo: " + paciente.Sexo);
                 Console.WriteLine("\tSintomas: " + paciente.Sintomas);
                 Console.WriteLine("\t==========================\n");

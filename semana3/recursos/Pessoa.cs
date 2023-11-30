@@ -9,13 +9,15 @@ namespace recursos
     {
         public string Nome { get; set; }
         public string Cpf { get; set; }
+        public int Idade;
         public DateTime DataNascimento { get; set; }
 
-        public Pessoa(string nome, DateTime dataNascimento, string cpf)
+        public Pessoa(string nome, DateTime dataNascimento, string cpf, int idade)
         {
             this.Nome = nome;
             this.DataNascimento = dataNascimento;
             this.Cpf = cpf;
+            this.Idade = idade;
         }
         
     }
