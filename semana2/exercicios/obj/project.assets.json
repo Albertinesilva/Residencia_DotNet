@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alber\\OneDrive\\Documentos\\ProjetosResidencia\\residenciaDotNet\\semana3\\exercicios\\exercicios.csproj",
+      "projectUniqueName": "C:\\Users\\alber\\OneDrive\\Documentos\\ProjetosResidencia\\residenciaDotNet\\semana2\\exercicios\\exercicios.csproj",
       "projectName": "exercicios",
-      "projectPath": "C:\\Users\\alber\\OneDrive\\Documentos\\ProjetosResidencia\\residenciaDotNet\\semana3\\exercicios\\exercicios.csproj",
+      "projectPath": "C:\\Users\\alber\\OneDrive\\Documentos\\ProjetosResidencia\\residenciaDotNet\\semana2\\exercicios\\exercicios.csproj",
       "packagesPath": "C:\\Users\\alber\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alber\\OneDrive\\Documentos\\ProjetosResidencia\\residenciaDotNet\\semana3\\exercicios\\obj\\",
+      "outputPath": "C:\\Users\\alber\\OneDrive\\Documentos\\ProjetosResidencia\\residenciaDotNet\\semana2\\exercicios\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alber\\AppData\\Roaming\\NuGet\\NuGet.Config"

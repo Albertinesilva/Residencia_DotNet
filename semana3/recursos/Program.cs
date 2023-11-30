@@ -1,4 +1,5 @@
 ﻿using System;
+using recursos;
 
 namespace MeuPrimeiroProjeto
 {
@@ -6,7 +7,8 @@ namespace MeuPrimeiroProjeto
   {
     static void Main(string[] args)
     {
-
+      ListPaciente pacientes = new ListPaciente();
+      App.MenuGestaoClinica(pacientes);
     }
   }
 }
